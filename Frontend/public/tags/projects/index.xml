@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on Portfolio</title>
+    <link>//saifbari.com/tags/projects/</link>
+    <description>Recent content in projects on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 May 2023 10:53:30 -0700</lastBuildDate><atom:link href="//saifbari.com/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Resume</title>
+      <link>//saifbari.com/cloud-resume/</link>
+      <pubDate>Fri, 05 May 2023 10:53:30 -0700</pubDate>
+      
+      <guid>//saifbari.com/cloud-resume/</guid>
+      <description>Inspired by the AWS Cloud Resume Challenge
+Link Certifications Link Professional Experience Systems Administrator, Technical Solutions Engineer, IT Consultant
+Fixed Computing
+Aug 2014 - Present
+Over a seven-year period, designed and executed comprehensive technical infrastructures for three separate graduate film program sites for Mount Saint Mary’s University. Managed a broad scope that included low-voltage, network infrastructure, end-user devices, on-premise servers, cloud systems, software management, technical support, multimedia studios, AV systems, and educational labs.</description>
+    </item>
+    
+  </channel>
+</rss>

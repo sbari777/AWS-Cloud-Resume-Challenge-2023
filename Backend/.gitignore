@@ -1,0 +1,18 @@
+# Local .terraform directories
+**/.terraform/*
+# .tfstate files
+*.tfstate
+*.tfstate.*
+# Crash log files
+crash.log
+# Ignore any .tfvars files 
+terraform.auto.tfvars
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.DS_Store
+tfc-getting-started/
+*.hcl
+terraform.tf

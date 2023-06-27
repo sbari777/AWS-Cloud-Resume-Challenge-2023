@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>//saifbari.com/blog/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/blog/lorem-markdownum/</loc>
+    <lastmod>2023-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/tags/cloud-resume/</loc>
+    <lastmod>2023-05-05T10:53:30-07:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/cloud-resume/</loc>
+    <lastmod>2023-05-05T10:53:30-07:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/tags/projects/</loc>
+    <lastmod>2023-05-05T10:53:30-07:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/tags/</loc>
+    <lastmod>2023-05-05T10:53:30-07:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/</loc>
+    <lastmod>2023-05-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/about/</loc>
+    <lastmod>2021-12-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//saifbari.com/categories/</loc>
+  </url>
+</urlset>
