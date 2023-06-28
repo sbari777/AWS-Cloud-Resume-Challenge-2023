@@ -14,13 +14,13 @@ window.onload = () => {
 async function updateVisitorCounter() {
   try {
     // Fetch the visitor count from the API at the given URL
-    const response = await fetch("https://h1erdsba4h.execute-api.us-west-2.amazonaws.com/Production");
+    const response = await fetch("https://udp3dc8t4a.execute-api.us-west-2.amazonaws.com/Production/VC-API-METHODS/");
 
     // Parse the JSON response
     const data = await response.json();
 
     // Extract the count property from the parsed JSON data
-    const count = data.body.count;
+    const count = data.body;
 
     // Log the fetched visitor count to the console
     console.log("Fetched visitor count:", count);

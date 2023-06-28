@@ -1,6 +1,6 @@
 #DynamoDB Parameters
 variable "dynamodb_table_name" {
-  type    = string
+  type = string
 }
 
 variable "dynamodb_billing_mode" {
@@ -17,7 +17,6 @@ variable "dynamodb_table_storage_class" {
   type    = string
   default = "STANDARD"
 }
-
 
 variable "current_count_number" {
   type = number
