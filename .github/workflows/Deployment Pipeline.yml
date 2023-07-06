@@ -1,6 +1,9 @@
-name: 'Terraform Plan'
+name: 'Cloud Resume Challenge Testing and Infrastructure Deployment'
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
