@@ -10,6 +10,15 @@ on:
     paths:
       - 'Backend/**'
 
+env:
+  TF_VAR_dynamodb_table_name: ${{ env.dynamodb_table_name }}
+  TF_VAR_dynamodb_partition_key: ${{ env.dynamodb_partition_key }} 
+  TF_VAR_current_count_number: ${{ env.current_count_number }} 
+  TF_VAR_s3_lambda_function_bucket : ${{ env.s3_lambda_function_bucket }} 
+  TF_VAR_s3_key_lambda_function_file : ${{ env.s3_key_lambda_function_file }} 
+  TF_VAR_domain_name : ${{ env.domain_name }} 
+
+
 jobs:
   terraform:
     name: 'Terraform'
