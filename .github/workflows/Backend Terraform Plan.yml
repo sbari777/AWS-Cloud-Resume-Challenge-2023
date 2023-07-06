@@ -28,15 +28,15 @@ jobs:
 
       - name: 'Terraform Init'
         run: |
-          cd backend
+          cd Backend
           terraform init
 
       - name: 'Terraform Validate'
         run: |
-          cd backend
+          cd Backend
           terraform validate
 
       - name: 'Terraform Plan'
         run: |
-          cd backend
+          cd Backend
           terraform plan
