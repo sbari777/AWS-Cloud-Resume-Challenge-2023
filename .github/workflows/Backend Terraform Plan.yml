@@ -27,16 +27,16 @@ jobs:
         uses: hashicorp/setup-terraform@v2.0.3
 
       - name: 'Terraform Init'
-        run: 
+        run: |
           cd backend
           terraform init
 
       - name: 'Terraform Validate'
-        run: 
+        run: |
           cd backend
           terraform validate
 
       - name: 'Terraform Plan'
-        run: 
+        run: |
           cd backend
           terraform plan
