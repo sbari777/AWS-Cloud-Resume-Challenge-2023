@@ -11,12 +11,12 @@ on:
       - 'Backend/**'
 
 env:
-  TF_VAR_dynamodb_table_name: ${{ env.dynamodb_table_name }}
-  TF_VAR_dynamodb_partition_key: ${{ env.dynamodb_partition_key }} 
-  TF_VAR_current_count_number: ${{ env.current_count_number }} 
-  TF_VAR_s3_lambda_function_bucket : ${{ env.s3_lambda_function_bucket }} 
-  TF_VAR_s3_key_lambda_function_file : ${{ env.s3_key_lambda_function_file }} 
-  TF_VAR_domain_name : ${{ env.domain_name }} 
+  TF_VAR_dynamodb_table_name: ${{ env.DYNAMODB_TABLE_NAME }}
+  TF_VAR_dynamodb_partition_key: ${{ env.DYNAMODB_PARTITION_KEY }} 
+  TF_VAR_current_count_number: ${{ env.CURRENT_COUNT_NUMBER }} 
+  TF_VAR_s3_lambda_function_bucket : ${{ env.S3_LAMBDA_FUNCTION_BUCKET }} 
+  TF_VAR_s3_key_lambda_function_file : ${{ env.S3_KEY_LAMBDA_FUNCTION_FILE }} 
+  TF_VAR_domain_name : ${{ env.DOMAIN_NAME }} 
 
 
 jobs:
