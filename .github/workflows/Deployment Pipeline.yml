@@ -10,15 +10,6 @@ on:
     paths:
       - 'Backend/**'
 
-env:
-  TF_VAR_dynamodb_table_name: ${{ secrets.DYNAMODB_TABLE_NAME }}
-  TF_VAR_dynamodb_partition_key: ${{ secrets.DYNAMODB_PARTITION_KEY }} 
-  TF_VAR_current_count_number: ${{ secrets.CURRENT_COUNT_NUMBER }} 
-  TF_VAR_s3_lambda_function_bucket : ${{ secrets.S3_LAMBDA_FUNCTION_BUCKET }} 
-  TF_VAR_s3_key_lambda_function_file : ${{ secrets.S3_KEY_LAMBDA_FUNCTION_FILE }} 
-  TF_VAR_domain_name : ${{ secrets.DOMAIN_NAME }} 
-
-
 jobs:
   terraform:
     name: 'Terraform'
