@@ -12,7 +12,7 @@ class TestLambdaHandler(unittest.TestCase):
     def setUp(self):
         # function sets up testing environment where mock DynamoDB table is
         # configured and initialized. Uses same table schema as in production.
-        self.dynamodb = boto3.resource('dynamodb')
+        self.dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
         self.table = self.dynamodb.create_table(
             TableName='VisitorCount',
             KeySchema=[{'AttributeName': 'visitorCount', 'KeyType': 'HASH'}],
