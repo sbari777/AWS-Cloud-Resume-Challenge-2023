@@ -32,7 +32,13 @@ jobs:
       - name: 'Terraform Init'
         run: |
           cd Backend
-          terraform init
+          terraform init -backend-config="bucket=$TF_STATE_S3" -backend-config="region=$AWS_REGION" -backend-config="key=$TF_STATE_S3_KEY" -backend-config="dynamodb_table=$TF_DB_LOCK" -backend-config="encrypt=true"
+        env:
+            AWS_REGION: us-west-2
+            TF_STATE_S3: ${{ secrets.TF_STATE_S3 }}
+            TF_STATE_S3_KEY: ${{ secrets.TF_STATE_S3_KEY }}
+            TF_DB_LOCK: ${{ secrets.TF_DB_LOCK }}
+
 
       - name: 'Terraform Validate'
         run: |
