@@ -10,7 +10,26 @@ on:
     paths:
       - 'Backend/**'
 
+      
 jobs:
+  Lambda-Testing:
+    runs-on: ubuntu-latest
+    name: Perform lambda backend unit test 
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+      - name: Python Dependency Installation
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install unittest moto
+      - name: Run unit test
+        run: |
+          python3 visitor-counter-test.py 
+
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
