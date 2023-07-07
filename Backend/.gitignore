@@ -6,7 +6,7 @@
 # Crash log files
 crash.log
 # Ignore any .tfvars files 
-#terraform.auto.tfvars
+terraform.auto.tfvars
 
 override.tf
 override.tf.json
