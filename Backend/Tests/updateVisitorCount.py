@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     print(new_viewers)
 
     return {
-        "statusCode": 400,
+        "statusCode": 200,
         "headers": {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': 'https://saifbari.com'
