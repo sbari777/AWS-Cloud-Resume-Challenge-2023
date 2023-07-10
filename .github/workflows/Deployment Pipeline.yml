@@ -71,10 +71,6 @@ jobs:
         run: |
           cd Backend
           terraform plan
-      
-      - name: Terraform Plan Status
-        if: steps.plan.outcome == 'failure'
-        run: exit 1
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -86,3 +82,22 @@ jobs:
           TF_STATE_S3: ${{ secrets.TF_STATE_S3 }}
           TF_STATE_S3_KEY: ${{ secrets.TF_STATE_S3_KEY }}
           TF_DB_LOCK: ${{ secrets.TF_DB_LOCK }}
+  
+  cf-cdn-cache-invalidation:
+    runs-on: ubuntu-latest
+    needs:
+      - terraform
+    name: CloudFront Cache Invalidation
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3.5.3
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'us-west-2'
+      - name: Invalidate CloudFront Cache
+        run: |
+          AWS_CF_DISTRIBUTION_ID=$(aws cloudfront list-distributions --query 'DistributionList.Items[0].Id' --output text)
+          aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths "/*"
