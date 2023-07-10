@@ -85,10 +85,6 @@ jobs:
           TF_STATE_S3: ${{ secrets.TF_STATE_S3 }}
           TF_STATE_S3_KEY: ${{ secrets.TF_STATE_S3_KEY }}
           TF_DB_LOCK: ${{ secrets.TF_DB_LOCK }}
-      - name: Terraform Apply replace verfied lambda function code
-        run: |
-          cd Backend
-          terraform apply -auto-approve -input=false -replace aws_lambda_function.UPDATE-VISITOR-COUNTER-FUNCTION
   
   cf-cdn-cache-invalidation:
     runs-on: ubuntu-latest
