@@ -88,7 +88,7 @@ jobs:
       - name: Terraform Apply replace verfied lambda function code
         run: |
           cd Backend
-          terraform apply -auto-approve -input=false -target aws_lambda_function.UPDATE-VISITOR-COUNTER-FUNCTION
+          terraform apply -auto-approve -input=false -replace aws_lambda_function.UPDATE-VISITOR-COUNTER-FUNCTION
   
   cf-cdn-cache-invalidation:
     runs-on: ubuntu-latest
