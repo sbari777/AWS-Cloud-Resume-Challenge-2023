@@ -78,7 +78,9 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: | 
+          cd Backend
+          terraform apply -auto-approve -input=false
         env:
           AWS_REGION: 'us-west-2'
           TF_STATE_S3: ${{ secrets.TF_STATE_S3 }}
