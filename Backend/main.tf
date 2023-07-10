@@ -140,7 +140,7 @@ resource "aws_lambda_function" "UPDATE-VISITOR-COUNTER-FUNCTION" {
   architectures = [
     "x86_64",
   ]
-  function_name = "updateVisitorCount"
+  function_name = "updateVisitorCounter"
   role          = module.Lambda-Function-Role.iam_role_arn
   runtime       = "python3.10"
   handler       = "lambda_function.lambda_handler"
