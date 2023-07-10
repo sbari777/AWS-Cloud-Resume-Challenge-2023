@@ -155,6 +155,10 @@ resource "aws_lambda_function" "UPDATE-VISITOR-COUNTER-FUNCTION" {
   tracing_config {
     mode = "PassThrough"
   }
+
+    lifecycle {
+    create_before_destroy = false
+  }
 }
 
 #Permission policy that allows lambda to be invoked via API Gateway trigger.
