@@ -147,6 +147,7 @@ resource "aws_lambda_function" "UPDATE-VISITOR-COUNTER-FUNCTION" {
   s3_bucket     = var.s3_lambda_function_bucket
   s3_key        = var.s3_key_lambda_function_file
   skip_destroy  = false
+  force_destroy = true
 
   ephemeral_storage {
     size = 512
