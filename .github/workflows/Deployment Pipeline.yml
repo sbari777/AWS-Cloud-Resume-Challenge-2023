@@ -71,3 +71,16 @@ jobs:
         run: |
           cd Backend
           terraform plan
+      
+      - name: Terraform Plan Status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false
+        env:
+          AWS_REGION: 'us-west-2'
+          TF_STATE_S3: ${{ secrets.TF_STATE_S3 }}
+          TF_STATE_S3_KEY: ${{ secrets.TF_STATE_S3_KEY }}
+          TF_DB_LOCK: ${{ secrets.TF_DB_LOCK }}
