@@ -39,7 +39,8 @@ jobs:
           aws-region: 'us-west-2'
       - name: Zip and upload verfied code to S3
         run: |
-          zip updateVisitorCount.zip ./Backend/Tests/updateVisitorCount.py
+          cd ./Backend/Tests
+          zip updateVisitorCount.zip updateVisitorCount.py
           aws s3 cp updateVisitorCount.zip s3://visitor-counter-lambda-function-0239458/
 
   terraform:
