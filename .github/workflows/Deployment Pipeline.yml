@@ -115,6 +115,10 @@ jobs:
     steps:
       - name: Repository Checkout
         uses: actions/checkout@v3.5.3
+      - name: Install Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.115.2/hugo_0.115.2_linux-amd64.deb
+          sudo dpkg -i hugo_0.80.0_Linux-64bit.deb
       - name: Build Hugo Site and Generate Shippable CSS
         run: |
           cd Frontend
