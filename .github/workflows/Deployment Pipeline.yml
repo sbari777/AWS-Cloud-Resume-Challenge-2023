@@ -108,6 +108,7 @@ jobs:
   HUGO-Static-Site-Generation:
     runs-on: ubuntu-latest
     needs:
+      - Lambda-Testing
       - terraform
       - cf-cdn-cache-invalidation
     name: Build HUGO Site and Tailwind CSS Assetts
