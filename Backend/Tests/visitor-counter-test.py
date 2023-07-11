@@ -1,7 +1,7 @@
 import boto3
 import unittest
 from moto import mock_dynamodb
-from updateVisitorCount import lambda_handler
+from lambda_function import lambda_handler
 
 
 # @mock_dynamodb decorator mocks DynamoDB interactions for testing.
