@@ -1,0 +1,138 @@
+@tailwind base;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headline relative;
+  }
+
+  .prose a {
+    @apply transition-colors duration-200 hover:no-underline hover:transition-colors hover:duration-200;
+  }
+
+  .prose a:hover {
+    @apply no-underline transition-colors duration-200;
+  }
+
+  .prose a strong {
+    color: inherit;
+  }
+
+  .prose pre {
+    @apply mt-0;
+  }
+
+  .prose .u-url {
+    color: inherit;
+    font-weight: inherit;
+    @apply no-underline;
+  }
+
+  .prose .u-photo {
+    @apply my-0;
+  }
+
+  .prose .p-content {
+    @apply my-0;
+  }
+
+  .prose .u-author {
+    @apply font-bold;
+  }
+
+  .prose .facepile {
+    @apply transition ease-in-out hover:scale-150 duration-300 hover:z-20;
+  }
+
+  .prose pre > code {
+    background-color: inherit;
+    border-radius: inherit;
+    padding: unset;
+    font-weight: inherit;
+  }
+  .prose code::before,
+  .prose code::after {
+    content: none;
+  }
+
+  .prose code {
+    @apply bg-gray-200 dark:bg-gray-500 rounded-md p-1 font-light;
+  }
+  body {
+    @apply font-body;
+  }
+
+  .no-prose li::before {
+    background-color: unset !important;
+  }
+
+  .pagination a {
+    @apply mx-2 rounded-md text-base border border-gray-300 w-1/2 p-2 items-center justify-center hover:no-underline text-gray-500;
+  }
+
+  .inline-svg {
+    @apply inline-block relative h-5 w-5 top-1;
+  }
+
+  .size-10 {
+    @apply h-10 w-10;
+  }
+
+  .isso-comment-footer {
+    @apply flex flex-row;
+  }
+
+  /* Shamelessly ripped from https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/ */
+  .copy-code-button {
+    @apply border rounded bg-white dark:bg-gray-500 border-gray-900 block ml-auto mr-0;
+    /* Until we get a new version of Tailwind that supports 
+    @apply with complex classes, including responsive and pseudo-class variants */
+    /* @apply rounded-sm sm */
+    margin-bottom: -2px;
+    padding: 3px 8px;
+    font-size: 0.875rem;
+  }
+
+  .copy-code-button:hover {
+    @apply cursor-pointer bg-gray-50 dark:bg-gray-600;
+  }
+
+  .copy-code-button:focus {
+    /* Avoid an ugly focus outline on click in Chrome,
+       but darken the button for accessibility.
+       See https://stackoverflow.com/a/25298082/1481479 */
+    @apply outline-none bg-gray-100 dark:bg-gray-700;
+  }
+
+  .copy-code-button:active {
+    @apply bg-gray-200 dark:bg-gray-800;
+  }
+
+  .link-owner:hover > .link {
+    @apply opacity-90 transition ease-in-out delay-150 duration-300;
+  }
+
+  .link {
+    @apply inline-svg h-10 w-10 opacity-0 ml-1 align-top left-0 absolute -translate-x-full pr-2;
+  }
+
+  .notice {
+    @apply border-l-2 border-l-accent-500 pl-3;
+  }
+
+  .footer-copyright a {
+    @apply underline hover:text-accent-400;
+  }
+
+  h1.note {
+    @apply text-xl hidden;
+  }
+
+  hr.note {
+    @apply m-1;
+  }
+}

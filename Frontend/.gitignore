@@ -1,13 +1,2 @@
 .DS_Store
-.hugo_build.lock
-archetypes/
-assets/
-config.toml
-content/
-data/
 db.json
-hugo_stats.json
-layouts/
-resources/
-static/
-themes/

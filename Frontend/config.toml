@@ -1,0 +1,54 @@
+baseURL = '//saifbari.com'
+languageCode = 'en-us'
+name = 'Saif Bari'
+title = 'Portfolio'
+theme = "chringel-hugo-theme"
+
+pluralizelisttitles = false
+paginate = 10
+enableEmoji = true
+
+[Params]
+    name = "Saif Bari"
+    email = "saifkbari@gmail.com"  
+    favicon = "favicon.ico"  
+    
+    # Title to be displayed in header
+    headerTitle = 'saif-bari@dev: ~/$'
+    # User image
+    titleImage = 'images/saifbari-testimg.jpeg'
+
+# Favicons config
+# Get your favicons from https://realfavicongenerator.net/
+# Put them in the 'static' folder
+[Params.favicons]
+  appleTouchIcon = '/apple-touch-icon.png'
+  icon32 = '/favicon-32x32.png'
+  icon16 = '/favicon-16x16.png'
+  manifest = '/site.webmanifest'
+  maskIcon = '/safari-pinned-tab.svg'
+  msApplicationTileColor = '#5bbad5'
+  themeColor = '#ffffff'
+
+# Social icons to be displayed on the front page
+[[menu.social]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/saif-bari-379191189/"
+
+[[menu.social]]
+  name = "Github"
+  url = "https://github.com/sbari777"
+
+[[menu.social]]
+  name = "mail"
+  url = "mailto:saifkbari@gmail.com"
+
+# To make purging of CSS classes work in production
+[build]
+  writeStats = true
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+

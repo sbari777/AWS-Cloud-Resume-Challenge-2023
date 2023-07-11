@@ -1,0 +1,11 @@
+{{ $image := resources.Get (.Get 0) }}
+{{ $resized := $image.Resize "250x" }}
+{{ $url := .Get 1 }} 
+{{ if $image }}
+    <a href="{{ $url }}"> 
+        <img src="{{ $resized.Permalink }}" alt="Image Alt Text" />
+    </a> 
+{{ else }}
+    <p>Error: Image not found!</p>
+{{ end }}
+
