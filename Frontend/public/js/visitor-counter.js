@@ -14,7 +14,7 @@ window.onload = () => {
 async function updateVisitorCounter() {
   try {
     // Fetch the visitor count from the API at the given URL
-    const response = await fetch("https://udp3dc8t4a.execute-api.us-west-2.amazonaws.com/Production/VC-API-METHODS/");
+    const response = await fetch("https://udp3dc8t4a.execute-api.us-west-2.amazonaws.com/Production/VC-API-METHODS");
 
     // Parse the JSON response
     const data = await response.json();
