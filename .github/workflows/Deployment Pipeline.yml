@@ -136,6 +136,8 @@ jobs:
         run: |
           cd Frontend
           hugo --environment production --minify
+          cd themes/chringel-hugo-theme
+          postcss assets/css/styles.css --config assets/css/postcss.config.js > assets/css/build.css
       - name: S3 Deploy
         uses: jakejarvis/s3-sync-action@master
         with:
