@@ -1,0 +1,103 @@
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <title>
+    {{ block "title" . }}
+      {{ if .Title }}
+        {{- .Title }} -
+      {{ else }}
+        {{ .Type | humanize }} -
+      {{ end }}
+      {{ .Site.Title -}}
+    {{ end }}
+  </title>
+  {{- if .Description -}}
+    <meta name="description" content="{{ .Description | safeHTML }}" />
+  {{ else if .Site.Params.description }}
+    <meta
+      name="description"
+      content="{{ .Site.Params.Description | safeHTML }}"
+    />
+  {{- end -}}
+  {{- if .Params.Author -}}
+    <meta name="author" content="{{ .Params.Author }}" />
+  {{ end -}}
+  {{ if or (hugo.IsProduction) (ne .Type "resume") }}
+    <meta name="robots" content="index,follow" />
+  {{ else }}
+    <meta name="robots" content="noindex,nofollow" />
+  {{ end }}
+  {{ hugo.Generator }}
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "partials/favicons.html" . }}
+  {{ template "partials/site-schema.html" . }}
+  <link
+    rel="preload"
+    href="/fonts/Comfortaa-Light.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="/fonts/FiraSans-Regular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="/fonts/Comfortaa-Bold.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin
+  />
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+  {{ with .Site.Params.indieweb }}
+    <link
+      rel="authorization_endpoint"
+      href="{{ .authorizationEndpoint | default "https://indieauth.com/auth" }}"
+    />
+    <link
+      rel="token_endpoint"
+      href="{{ .tokenEndpoint | default "https://tokens.indieauth.com/token" }}"
+    />
+  {{ end }}
+  {{ with .Site.Params.webmention }}
+    <link
+      rel="webmention"
+      href="{{ .webmentionUrl }}{{ .webmentionEndpoint }}"
+    />
+    <link
+      rel="pingback"
+      href="{{ .webmentionUrl }}{{ .webmentionPingbackEndpoint }}"
+    />
+  {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  {{ $styles := resources.Get "css/build.css" }}
+  {{ $env := getenv "HUGO_THEME_DEVELOPMENT" }}
+  {{ if eq $env "true" }}
+    {{ $styles = resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+  {{ end }}
+
+  {{- if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  {{ else }}
+    {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.Permalink }}"
+      integrity="{{ $styles.Data.Integrity }}"
+      crossorigin="anonymous"
+    />
+  {{ end -}}
+  {{ partial "analytics.html" . }}
+</head>
