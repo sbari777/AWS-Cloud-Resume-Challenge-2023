@@ -134,7 +134,7 @@ jobs:
           npm install
       - name: Build Hugo Site and Generate Shippable CSS
         run: |
-          cd themes/chringel-hugo-theme
+          cd Frontend/themes/chringel-hugo-theme
           postcss assets/css/styles.css --config assets/css/postcss.config.js > assets/css/build.css
           cd ../..
           hugo --environment production --minify
