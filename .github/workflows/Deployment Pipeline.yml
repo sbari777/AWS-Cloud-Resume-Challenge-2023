@@ -128,6 +128,7 @@ jobs:
           node-version: '20.1.0'
       - name: Install theme
         run: |
+          cd Frontend
           npm install -g postcss-cli
           npm install -g autoprefixer
           npm install
