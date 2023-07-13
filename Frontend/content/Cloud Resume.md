@@ -27,6 +27,7 @@ layout: "single-with-counter-sub-menu-items"
 <div style="display: flex; justify-content: space-around;">
 {{< badge-images "images/SysOpsBadge.png" "https://www.credly.com/badges/db4955c2-3870-47ba-803c-fb1a026b9851/public_url">}}
 {{< badge-images "images/SolutionsArchitectBadge.png" "https://www.credly.com/badges/3e2a0155-7c5e-4243-acd3-34c4e6c1c195/public_url">}}
+{{< badge-images "images/hashicorp-certified-terraform-associate-003.png" "https://www.credly.com/badges/d314e92f-f359-4961-92b3-efa1ad8ca38d/public_url">}}
 </div>
 {{< /rawhtml >}}
 
