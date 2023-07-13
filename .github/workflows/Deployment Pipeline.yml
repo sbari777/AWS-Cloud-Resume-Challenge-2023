@@ -33,6 +33,10 @@ jobs:
               - 'Backend/**'
             frontend:
               - 'Frontend/**'
+      - name: Debug Outputs
+        run: |
+          echo "Backend changes: ${{ steps.changes.outputs.backend }}"
+          echo "Frontend changes: ${{ steps.changes.outputs.frontend }}"
 
   Lambda-Testing:
     runs-on: ubuntu-latest
