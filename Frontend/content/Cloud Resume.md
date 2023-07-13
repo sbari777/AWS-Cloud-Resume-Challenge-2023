@@ -41,13 +41,13 @@ layout: "single-with-counter-sub-menu-items"
 **Systems Administrator, Technical Solutions Engineer, IT Consultant**  
 *Fixed Computing*   
 *Aug 2014 - Present*  
-- Over a seven-year period, designed and executed comprehensive technical infrastructures for three separate graduate film program sites for Mount Saint Mary’s University.
+- Designed and executed comprehensive technical infrastructures for three separate graduate film program sites for Mount Saint Mary’s University.
   - Managed a broad scope that included low-voltage, network infrastructure, end-user devices, on-premise servers, cloud systems, software management, technical support, multimedia studios, AV systems, and educational labs.
   - Demonstrated commitment to operational excellence, maintaining 100% uptime and consistently meeting Service Level Agreement (SLA) standards through the diligent support of systems, crucial business operations, and end-user requirements.
-- Over a four-year period, provided technical support and consultation to the advertising firm, Storyboards Inc, resolving persistent issues and improving system performance, contributing to increased operational efficiency.
+- Provided technical support and consultation to the advertising firm, Storyboards Inc, resolving persistent issues and improving system performance, contributing to increased operational efficiency.
   - Strategically upgraded and optimized on-premises network infrastructure, servers, and end-user devices, boosting performance and operational capabilities.
   - Facilitated the migration of technical assets to Google Workspaces, assisting the organization's transition to remote work.
-- Over a two-year period, executed network infrastructure and security systems upgrades for a business owner operating two All-State insurance offices and a coffee shop.
+- Executed network infrastructure and security systems upgrades for a business owner operating two All-State insurance offices and a coffee shop.
   - Additionally, provided robust Windows end-user support, enhancing system functionality and user experience.
 
 **Technical Support Manager of Desktop and Media Services**  
