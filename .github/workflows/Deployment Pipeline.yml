@@ -11,10 +11,34 @@ on:
       - 'Backend/**'
       - 'Frontend/**'
       
+
 jobs:
+  Check-Changes:
+    runs-on: ubuntu-latest
+    outputs:
+      backend: ${{ steps.changes.outputs.backend }}
+      frontend: ${{ steps.changes.outputs.frontend }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Path Filter
+        id: changes
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            backend:
+              - 'Backend/**'
+            frontend:
+              - 'Frontend/**'
+
   Lambda-Testing:
     runs-on: ubuntu-latest
+    needs: Check-Changes
     name: Lambda Backend Testing
+    if: ${{ needs.check_changes.outputs.backend == 'true' }}
     env:
       AWS_DEFAULT_REGION: us-west-2
     steps:
@@ -46,7 +70,10 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    needs: Lambda-Testing
+    needs: 
+      - Lambda-Testing
+      - Check-Changes
+    if: ${{ needs.check_changes.outputs.backend == 'true' }}
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3.5.3
@@ -89,7 +116,10 @@ jobs:
   cf-cdn-cache-invalidation:
     runs-on: ubuntu-latest
     needs:
+      - Lambda-Testing
       - terraform
+      - Check-Changes
+    if: ${{ needs.check_changes.outputs.frontend == 'true' || needs.check_changes.outputs.backend == 'true' }}
     name: CloudFront Cache Invalidation
     steps:
       - name: Repository Checkout
@@ -105,12 +135,14 @@ jobs:
           AWS_CF_DISTRIBUTION_ID=$(aws cloudfront list-distributions --query 'DistributionList.Items[0].Id' --output text)
           aws cloudfront create-invalidation --distribution-id $AWS_CF_DISTRIBUTION_ID --paths "/*"
   
-  HUGO-Build-and-S3-Deply:
+  HUGO-Build-and-S3-Deploy:
     runs-on: ubuntu-latest
     needs:
       - Lambda-Testing
       - terraform
       - cf-cdn-cache-invalidation
+      - Check-Changes
+    if: ${{ needs.check_changes.outputs.frontend == 'true' || needs.check_changes.outputs.backend == 'true' }}
     name: Build HUGO Site and Deploy to S3
     steps:
       - name: Repository Checkout
