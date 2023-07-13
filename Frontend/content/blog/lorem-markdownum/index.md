@@ -1,12 +1,12 @@
 ---
 author: Saif Bari
-title: TEST POST
+title: Cloud Resume Challenge Complete!
 date: 2023-05-19
 cover:
   src: "images/aaron-burden-AXqMy8MSSdk-unsplash.jpg"
   caption: Aaron Burden
 ---
-TEST POST
+Cloud Resume Challenge Complete!
 
 ---
 
