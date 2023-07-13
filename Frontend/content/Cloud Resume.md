@@ -97,7 +97,7 @@ Terraform, AWS CloudFormation, Docker, AWS SAM
 **Programming Languages**  
 Shell, Python, JavaScript, HTML/CSS  
 **Databases**   
-SQL/Postgres, NoSQL  
+PostgreSQL, NoSQL  
 **CI/CD**   
 Github, Github Actions  
 **Network**  

@@ -7,8 +7,12 @@ cover:
   caption: "AWS Services"
 draft: false
 type: blog
+layout: single
 ---
+
 Cloud Resume Challenge Complete! 
 Blog post coming soon. 
+
 ---
+
 Image: https://allcode.com/wp-content/uploads/2021/02/Group-169-3.png
