@@ -115,7 +115,7 @@ Google Workspaces, Office365, ServiceNow, Avid, Adobe, ConnectWise, Slack
 {{< rawhtml >}}
 </div>
 {{< /rawhtml >}}
-**UC San Diego**   
+**University of California San Diego**   
 *2007-2011*  
 Bachelors, ICAM (Interdisciplinary Computing and the Arts)  
 

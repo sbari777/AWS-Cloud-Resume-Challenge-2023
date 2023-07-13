@@ -121,7 +121,6 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - Check-Changes
-      - terraform
     if: ${{ needs.Check-Changes.outputs.frontend == 'true' || needs.Check-Changes.outputs.backend == 'true' }}
     name: CloudFront Cache Invalidation
     steps:
