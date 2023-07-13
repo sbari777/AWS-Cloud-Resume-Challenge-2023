@@ -38,7 +38,7 @@ layout: "single-with-counter-sub-menu-items"
 {{< rawhtml >}}
 </div>
 {{< /rawhtml >}}
-**Systems Administrator, Technical Solutions Engineer, IT Consultant**  
+**Systems Administrator, Solutions Engineer, IT Consultant**  
 *Fixed Computing*   
 *Aug 2014 - Present*  
 - Designed and executed comprehensive technical infrastructures for three separate graduate film program sites for Mount Saint Mary’s University.
