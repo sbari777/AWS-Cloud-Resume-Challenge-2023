@@ -5,9 +5,6 @@ date: 2023-07-22
 cover:
   src: "images/aws-generic.png"
   caption: "AWS Services"
-draft: false
-type: blog
-layout: single
 ---
 
 Cloud Resume Challenge Complete! 
