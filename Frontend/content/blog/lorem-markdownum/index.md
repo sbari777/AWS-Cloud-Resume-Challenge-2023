@@ -1,13 +1,11 @@
 ---
 author: Saif Bari
 title: Cloud Resume Challenge Complete!
-date: 2023-05-19
+date: 2023-07-23
 cover:
-  src: "images/aaron-burden-AXqMy8MSSdk-unsplash.jpg"
-  caption: Aaron Burden
+  src: "images/aws-generic.png"
 ---
-Cloud Resume Challenge Complete!
+Cloud Resume Challenge Complete! 
+Blog post coming soon. 
 
 ---
-
-Image: https://unsplash.com/@aaronburden
