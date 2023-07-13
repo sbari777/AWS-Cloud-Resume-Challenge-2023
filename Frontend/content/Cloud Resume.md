@@ -51,7 +51,7 @@ layout: "single-with-counter-sub-menu-items"
   - Additionally, provided robust Windows end-user support, enhancing system functionality and user experience.
 
 **Technical Support Manager of Desktop and Media Services**  
-*Mount Saint Mary's University*  
+*Mount Saint Mary's University Los Angeles*  
 *2014-2017*  
 - Led the Desktop Support, Help Desk Call Center, and AV/Media Departments, supporting an enterprise environment with 500 end-users, 1,800 computers, 1,000 mobile devices, AV systems, peripherals, and several servers across two campuses. Delivered 24/7/365 Level 1, 2, and 3 support.
 - Developed and continually optimized a technical support knowledge base and standard operating procedures, facilitating the organization's transition to a fully in-house IT structure.
