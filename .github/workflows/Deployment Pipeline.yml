@@ -116,8 +116,6 @@ jobs:
   cf-cdn-cache-invalidation:
     runs-on: ubuntu-latest
     needs:
-      - Lambda-Testing
-      - terraform
       - Check-Changes
     if: ${{ needs.check_changes.outputs.frontend == 'true' || needs.check_changes.outputs.backend == 'true' }}
     name: CloudFront Cache Invalidation
@@ -138,8 +136,6 @@ jobs:
   HUGO-Build-and-S3-Deploy:
     runs-on: ubuntu-latest
     needs:
-      - Lambda-Testing
-      - terraform
       - cf-cdn-cache-invalidation
       - Check-Changes
     if: ${{ needs.check_changes.outputs.frontend == 'true' || needs.check_changes.outputs.backend == 'true' }}
