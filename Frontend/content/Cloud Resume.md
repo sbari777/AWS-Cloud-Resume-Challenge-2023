@@ -60,7 +60,7 @@ layout: "single-with-counter-sub-menu-items"
 - Facilitated end-user support for newly implemented SaaS products during an institution-wide digital transformation initiative.
 
 **IT Analyst**  
-*Mount Saint Mary's University*  
+*Mount Saint Mary's University Los Angeles*  
 *2013-2014*  
 - Provided comprehensive technical support to faculty, staff, and students, troubleshooting and resolving a wide array of software and hardware issues both remotely and on-site.
 - Executed hardware deployment, upgrades, configuration, optimization and maintenance across computers, servers, printers, and venue sites.
@@ -72,7 +72,7 @@ layout: "single-with-counter-sub-menu-items"
 - Supported the maintenance, upgrades, and setup of AV equipment managed through Utelogy.
 
 **IT Support Specialist**  
-*UC San Diego*  
+*University of California San Diego*  
 *2007-2012*
 - Authored technical reports and created comprehensive user manuals, tutorials, and knowledge base articles, simplifying complex concepts for broad audiences.
 - Delivered robust technical support to end-users, conducting help desk functions, client issue triage, computer and peripheral device maintenance, and leveraging remote administration tools for technical support.
