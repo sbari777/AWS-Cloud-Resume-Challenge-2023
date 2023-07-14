@@ -1,1 +1,0 @@
-function smoothScrollToNode(e){var t=document.getElementById(e);t.scrollIntoView({behavior:"smooth"})}document.getElementById("bouncing-arrow").onclick=e=>{smoothScrollToNode("featured-post"),e.target.parentElement.remove()}
