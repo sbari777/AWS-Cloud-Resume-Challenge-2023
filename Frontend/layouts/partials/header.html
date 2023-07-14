@@ -92,15 +92,6 @@
           >
         </li>
       {{ end }}
-      {{ with .Site.GetPage "/blog" }}
-      <li>
-        <a
-          href="{{ .Permalink }}"
-          class="text-white transition-colors duration-200 dark:text-white font-mono hover:text-accent-400 mx-2"
-          >/{{ .Title }}</a
-        >
-      </li>
-    {{ end }}
       {{ range .Site.Sections }}
         <li>
           <a
