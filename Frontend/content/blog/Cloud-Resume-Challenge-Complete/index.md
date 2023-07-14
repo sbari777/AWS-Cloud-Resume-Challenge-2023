@@ -1,7 +1,7 @@
 ---
 author: Saif Bari
 title: Cloud Resume Challenge Complete
-date: 2021-01-07
+date: 13-07-2023
 cover:
   src: "images/aws-generic.jpg"
   caption: AWS Services
