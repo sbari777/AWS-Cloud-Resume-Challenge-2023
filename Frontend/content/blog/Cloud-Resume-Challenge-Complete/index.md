@@ -3,7 +3,7 @@ author: Saif Bari
 title: Cloud Resume Challenge Complete
 date: 2023-07-13
 cover:
-  src: "images/aws-generic.jpg"
+  src: "images/Cloud-Resume-Architecture.jpg"
   caption: AWS Services
 draft: false
 ---
