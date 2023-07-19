@@ -59,7 +59,7 @@
 ### Source Control & CI/CD (Back end and Front end)
 ![Github Actions](/img/GithubActions.jpg)
 - GitHub serves as the version control system, with GitHub Actions functioning as the CI/CD pipeline.
-- GitHub Actions detect changes in the frontend or backend of the repository and accordingly deploy the backend infrastructure or frontend content.
+- [The GitHub Actions workflow](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/.github/workflows/Deployment%20Pipeline.yml) detects changes in the frontend or backend of the repository and accordingly deploy the backend infrastructure or frontend content.
     - Unit testing is automated. If successful, it pushes code to the backend code bucket, from which Terraform retrieves code for the Lambda function.
     - If the unit test passes and there are changes in the backend directory, the Terraform workflow is triggered. A partial backend config initializes the remote backend for Terraform. 
     - If frontend changes occur, HUGO builds the site from the Frontend subdirectory, deploys it to the Front End S3 bucket, and invalidates the Cloudfront cache.
