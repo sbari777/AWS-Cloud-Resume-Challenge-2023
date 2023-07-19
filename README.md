@@ -30,23 +30,33 @@
 - HTTPS is enabled through an SSL certificate from Amazon Certificate Manager.
 
 ### DNS
+- Registered domain in Route53
+- A record routes traffic to cloudfront distribution
+- Enabled DNSSEC
 
 ### Javascript
+- The site uses [Javascript](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/Frontend/static/js/visitor-counter.js) to update and retrieve visitor count via an API url. 
+    - It parses the API's JSON response, extracts the visitor count, and then updates the visitor counter HTML element with the derived count. 
 
 ### Database 
+- Visitor Count is stored in a DynamoDB table.
+- A separate DynamoDB table holds the Terraform state lock.
 
 ### API 
+- The front-end interacts with DynamoDB through a combination of API Gateway and Lambda.
+- The Lambda function, invoked by the API Gateway, facilitates reading and writing to the DynamoDB table.
+- API Gateway is configured with a GET method for visitor count retrieval and an OPTIONS method with MOCK integration to support CORS.
 
-### Python 
+### Python & Testing
+- [Visitor Count Lambda function](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/Backend/Tests/lambda_function.py) and its [unit test](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/Backend/Tests/visitor-counter-test.py) are written in Python. 
+- The lambda function uses the Boto3 library for DynamoDB interaction, while the unit test uses the moto library to mock DynamoDB and assert the validity of the Lambda function code. 
 
-### Tests 
+### Infrastructure as Code (IaC)
+- The backend infrastructure for the visitor counter, including API Gateway, Lambda, DynamoDB, and their IAM configurations, is managed and deployed using Terraform.
+    - Terraform is configured with a remote S3 backend and DynamoDB for state locking. 
+- The [configuration](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/Backend/main.tf) uses a mix of modules and resource blocks to establish infrastructure.
 
-### Infrastructure as Code (IaC) 
+### Source Control & CI/CD (Back end and Front end)
 
-### Source Control 
-
-### CI/CD (Back end) 
-
-### CI/CD (Front End) 
 
 ### Blog Post 
