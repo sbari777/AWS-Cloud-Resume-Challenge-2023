@@ -26,7 +26,7 @@
 - Hosted in a private S3 bucket without static website hosting.
 - Visitors access the site via a Cloudfront Distribution configured with OAC, and not directly from the S3 origin. 
     - OAC only functions with S3 buckets, and S3 buckets don't auto-serve index.html for root/subdirectories. Cloudfront's root object feature is exclusive to the root and excludes subdirectories. 
-        - To make subdirectories accessible, append 'index.html' to URIs. [This requires a Cloudfront Function triggered viewer request associated with the distribution](https://github.com/aws-samples/amazon-cloudfront-functions/blob/main/url-rewrite-single-page-apps/index.js)
+        - To make subdirectories accessible, append 'index.html' to URIs. [This requires a Cloudfront Function triggered by viewer request to be associated with the distribution](https://github.com/aws-samples/amazon-cloudfront-functions/blob/main/url-rewrite-single-page-apps/index.js)
 - HTTPS is enabled through an SSL certificate from Amazon Certificate Manager.
 
 ### DNS
