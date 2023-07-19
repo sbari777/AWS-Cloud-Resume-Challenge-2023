@@ -9,7 +9,7 @@
  ## <div align="center"> REQUIREMENTS <div>
 
 ### Certifications 
-- Obtained [AWS Solutions Architect Associate](https://www.credly.com/badges/3e2a0155-7c5e-4243-acd3-34c4e6c1c195/public_url) and [AWS SysOps Administrator Associate](https://www.credly.com/badges/db4955c2-3870-47ba-803c-fb1a026b9851/public_url) certification
+- Obtained [AWS Solutions Architect Associate](https://www.credly.com/badges/3e2a0155-7c5e-4243-acd3-34c4e6c1c195/public_url), [AWS SysOps Administrator Associate](https://www.credly.com/badges/db4955c2-3870-47ba-803c-fb1a026b9851/public_url) certification, and [HashiCorp Certified: Terraform Associate](https://www.credly.com/badges/d314e92f-f359-4961-92b3-efa1ad8ca38d/public_url)
 
 ### HTML
 - Designed using HUGO static site generator
@@ -57,6 +57,12 @@
 - The [configuration](https://github.com/sbari777/AWS-Cloud-Resume-Challenge-2023/blob/main/Backend/main.tf) uses a mix of modules and resource blocks to establish infrastructure.
 
 ### Source Control & CI/CD (Back end and Front end)
+![Github Actions](/img/GithubActions.jpg)
+- GitHub serves as the version control system, with GitHub Actions functioning as the CI/CD pipeline.
+- GitHub Actions detect changes in the frontend or backend of the repository and accordingly deploy the backend infrastructure or frontend content.
+    - Unit testing is automated. If successful, it pushes code to the backend code bucket, from which Terraform retrieves code for the Lambda function.
+    - If the unit test passes and there are changes in the backend directory, the Terraform workflow is triggered. A partial backend config initializes the remote backend for Terraform. 
+    - If frontend changes occur, HUGO builds the site from the Frontend subdirectory, deploys it to the Front End S3 bucket, and invalidates the Cloudfront cache.
 
 
 ### Blog Post 
