@@ -10,7 +10,7 @@ draft: false
 
 ## Cloud Resume Challenge Complete! 
 
-Full Blog post coming soon. 
+Read about my experience working through the cloud resume challenge [here](https://dev.to/sbari777/insights-from-the-cloud-resume-challenge-5d1f)!
 
 
 ---
